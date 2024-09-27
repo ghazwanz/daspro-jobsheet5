@@ -20,6 +20,6 @@ import java.util.Scanner;
     // Metode Ternary
     String hasil = angka %2 == 0 ? "genap" : "ganjil";
     
-    System.out.println("Angka " + angka + " merupakan bilangan " + hasil);
+    System.out.println("Angka " + angka + " termasuk bilangan " + hasil);
    }
  }

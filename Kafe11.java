@@ -9,7 +9,7 @@ import java.util.Scanner;
     String menu;
     char ukuranCup;
     int jumlah;
-    boolean keanggotaan;
+    boolean keanggotaan,cup = true;
     
     System.out.print("Masukkan menu: ");
     menu = sc.nextLine();
@@ -35,6 +35,8 @@ import java.util.Scanner;
       case "coklat" :
         hargaMenu = 20000;
         break;
+      default:
+        hargaMenu = 0 ;
     }
     
     double totalHarga = hargaMenu * jumlah;
@@ -48,12 +50,18 @@ import java.util.Scanner;
       case 'L' :
         totalHarga += 0.4 * totalHarga;
         break;
+      default:
+        cup = false;
     }
     
-    double diskon = keanggotaan ? 0.1 : 0;
-    double nominalBayar = totalHarga - (totalHarga * diskon);
-    
-    System.out.println("Item pembelian: " + jumlah + " " + menu + " dengan ukuran cup " + ukuranCup);
-    System.out.println("Nominal bayar: " + nominalBayar);
+    if (cup) {
+      double diskon = keanggotaan ? 0.1 : 0;
+      double nominalBayar = totalHarga - (totalHarga * diskon);
+      
+      System.out.println("Item pembelian: " + jumlah + " " + menu + " dengan ukuran cup " + ukuranCup);
+      System.out.println("Nominal bayar: " + nominalBayar);
+    } else{
+      System.out.println("Size tidak tersedia");
+    }
    }
  }

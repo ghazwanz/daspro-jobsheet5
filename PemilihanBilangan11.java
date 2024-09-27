@@ -7,14 +7,19 @@ import java.util.Scanner;
     Scanner sc = new Scanner(System.in);
     System.out.print("Masukkan sebuah angka: ");
     int angka = sc.nextInt();
+    // Metode If
+    // if (angka %2 == 0)
+    // {
+    //   System.out.println("Angka "+angka+" termasuk bilangan genap");
+    // }
+    // else
+    // {
+    //   System.out.println("Angka "+angka+" termasuk bilangan ganjil");
+    // }
+
+    // Metode Ternary
+    String hasil = angka %2 == 0 ? "genap" : "ganjil";
     
-    if (angka %2 == 0)
-    {
-      System.out.println("Angka "+angka+" termasuk bilangan genap");
-    }
-    else
-    {
-      System.out.println("Angka "+angka+" termasuk bilangan ganjil");
-    }
+    System.out.println("Angka " + angka + " merupakan bilangan " + hasil);
    }
  }
